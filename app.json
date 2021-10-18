@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "reactnative-recipe-app",
-    "slug": "reactnative-recipe-app",
+    "name": "rn-recipe-app",
+    "slug": "rn-recipe-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
