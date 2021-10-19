@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading';
-import AppNavigator from './navigation/AppNavigator';
+import MainNavigator from './navigation/MainNavigator';
 
 const fetchFonts = (params) => {
   return Font.loadAsync({
@@ -24,7 +24,7 @@ export default function App() {
   }
 
   return (
-    <AppNavigator />
+    <MainNavigator />
   );
 }
 

@@ -11,21 +11,26 @@ import HeaderButton from '../components/HeaderButton';
 
 const Stack = createStackNavigator();
 
-const MealsNavigator = () => (
+const MealsNavigator = ({ navigation }) => (
     <Stack.Navigator
+        mode="modal"
         screenOptions={{
+            headerShown: false,
             headerStyle: {
                 backgroundColor: Platform.OS === 'android' ? '#546abf' : 'white',
             },
             headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primary
         }
         } >
-        <Stack.Screen name="Categories" component={CartegoriesScreen} />
+        <Stack.Screen
+            name="Categories"
+            component={CartegoriesScreen}
+        />
         <Stack.Screen name="CategoryMeals" component={CategoryMealsScreen} />
         <Stack.Screen
             name="MealDetail"
             component={MealDetailScreen}
-            options={({ navigation }) => ({
+            options={() => ({
                 title: 'Awesome app',
                 headerRight: () => (
                     <HeaderButtons HeaderButtonComponent={HeaderButton}>

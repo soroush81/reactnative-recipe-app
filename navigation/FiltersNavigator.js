@@ -1,32 +1,28 @@
 import React from 'react';
-
 import { createStackNavigator } from '@react-navigation/stack';
-import MealDetailScreen from '../screens/MealDetailScreen'
-import FavoriteScreen from '../screens/FavoriteScreen'
-import { Platform } from 'react-native'
+import FiltersScreen from '../screens/FiltersScreen'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
 
 const Stack = createStackNavigator();
 
-const FavoriteNavigator = () => (
+const FiltersNavigator = () => (
     <Stack.Navigator
         screenOptions={{
             headerStyle: {
                 backgroundColor: Platform.OS === 'android' ? '#546abf' : 'white',
             },
-            headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primary
+            headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primary,
         }
         } >
         <Stack.Screen
-            name="Favorites"
-            component={FavoriteScreen}
+            name="Filters"
+            component={FiltersScreen}
             options={({ navigation }) => ({
-                title: 'Your Favorite',
+                title: 'Filters',
             })}
         />
-        <Stack.Screen name="MealDetail" component={MealDetailScreen} />
     </Stack.Navigator >
 )
 
-export default FavoriteNavigator;
+export default FiltersNavigator;
 ;

@@ -3,6 +3,8 @@ import React from 'react'
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import CategoryGridTile from '../components/CategoryGridTile';
 import { CATEGORIES } from '../data/dummy-data'
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import HeaderButton from '../components/HeaderButton';
 
 const CategoriesScreen = ({ navigation }) => {
 
@@ -23,10 +25,6 @@ const CategoriesScreen = ({ navigation }) => {
       renderItem={renderGridItem}
     />
   );
-}
-
-CategoriesScreen.navigationOptions = {
-  headerTitle: 'Meal Categories',
 }
 
 const styles = StyleSheet.create({
